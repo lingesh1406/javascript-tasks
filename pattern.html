@@ -8,6 +8,7 @@
 <body>
 
     <h1> Pattern </h1>
+    <label for="inp"> box pattern </label><br>
     <input type="number" id="inp"> <button onclick="check()"> Check </button>
     <h3 id="text"> Patter Here</h3>
 </body>
@@ -15,38 +16,26 @@
 <script>
 
 
-    function check(){
+function check(){
         
-        let text = document.getElementById('text');
-        let num  = document.getElementById('inp').value;
+    let text = document.getElementById('text');
+    let num  = document.getElementById('inp').value;
 
     for(let i = 1 ; i <= num ; i++){
 
-        // document.write('*');
 
-        for(let j = 1 ; j <= num ; j++){
+    for(let j = 1 ; j <= num ; j++){
 
         if( i == 1 || i == num || j == 1 || j == num){
             document.write('*');
-            // text.innerHTML = '*';
         }
 
         else{
             document.write('   &nbsp');
-            // text.innerHTML = "&nbsp"
         }
-
-        // if( j = 1 || j == num){
-        //     document.write('*');
-        // }
-        // else{
-        //     document.write('&nbsp');
-        // }
-
     }
 
     document.write('<br>');
-    // text.innerHTML = '<br>';
     
 }
     }

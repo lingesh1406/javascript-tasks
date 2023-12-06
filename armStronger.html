@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Arm Stronger </title>
+</head>
+<style>
+    body{
+       margin: 0 10vw;
+   }
+</style>
+<body>
+    <h1>Arm stronger Number</h1>
+    <input type="number" id="input"/> <button type="submit" onclick="check()">Check it</button>
+    <h3 id="text"></h3> 
+</body>
+<script>
+
+function isArmStrongerNumber(Number){
+
+    let numStr = Number.toString();
+    let numDig = Number.length;
+    let total  = 0;
+
+    for( let i = 0  ; i < numDig ; i++){
+       total += Math.pow(parseInt( numStr[i] , numDig ));
+    }
+    console.log(numStr);
+    
+    return total == Number 
+
+    }
+
+function check(){
+
+    let num = document.getElementById('input').value;
+    let parseInput = parseInt(num);
+
+    // console.log(parseInput , num);
+
+    if(! isNaN(parseInput)){
+
+        if(isArmStrongerNumber(parseInput)){
+            text.innerHTML = `${parseInput} is an armstrong num` ;
+        }
+        else{
+            text.innerHTML = `${parseInput} is not an armstrong num` ;
+        }
+
+    }
+
+    else{
+        text.innerHTML = `please enter a valid number`
+    }
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+// let num1  = parseInt(prompt('enter your number')); 
+// let num2  = num1.toLocaleString();
+// let num3  = num2.length;
+// let total = 0;
+// // text.innerHTML = num3;
+
+
+// for( let i = 0 ; i <= num3 ; i++){
+    
+//     total += Math.pow(parseInt( num2[i] , num3 )); 
+
+//     }
+
+//     console.log( total );
+
+
+
+
+
+
+
+
+
+
+// console.log(Math.ceil(5.1));
+// console.log(Math.round(5.5));
+// console.log(Math.pow(3,2));                  //2*2*2*2*2*2  =  64 
+
+
+// console.log( 153 % 10 );
+
+                            // rem = num % 10
+                            // armnum += rem * rem * rem
+                            // num = num / 10
+
+
+                    // num = 160                         153 % 10
+// console.log( Math.floor( 153 % 10 )  , 3 * 3 * 3 , 153 / 10 );        // rem = 3 ; armnum = 27 ; num = 15.3
+// //                                                                15.3 % 10
+// console.log( Math.floor( 15.3 % 10 ) , 5 * 5 * 5 + 27 , 15 / 10 );       //rem = 5.3 ; armnum = 175.8 ; num = 1.53
+// //
+// console.log( Math.floor( 1.5 % 10 )  , 1 * 1 * 1 + 152 , 1 / 10 );          //rem=1.53 ; armnum = 2.2 ; num = 0
+
+
+    // let n      = parseInt(prompt('enter a number'));
+    // let num    = n ;
+    // let armnum = 0 ;
+    // let rem    = 0 ;
+
+    // while( num > 0 ){
+    
+    //     rem =Math.floor(num % 10);
+
+    //     armnum += rem * rem * rem;
+
+    //     num = num / 10;
+
+    // }
+
+    // console.log(n);
+    // console.log(num);
+    // console.log(armnum);
+
+
+    // function Check(){
+
+    
+    // if(n == armnum){
+    //     text.innerHTML=` ${armnum} is an armstrong num ` ;
+    // }
+    // else{
+    //     text.innerHTML= ` ${armnum}it is not an armstrong num`; 
+    // }
+
+    // }
+
+    //              console.log(armnum);
+
+</script>
+</html>

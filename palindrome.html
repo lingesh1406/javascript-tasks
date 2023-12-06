@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Palindrome</title>
+</head>
+<style>
+    body{
+       margin: 0 10vw;
+   }
+</style>
+<body>
+
+    <h1>Palindrome</h1>
+
+    <h3 id="text"></h3>
+
+    <input type="text" id="inp"/>
+    <button onclick="check()" type="submit"> Check </button><br/><br/>
+    <b id="text1"></b>
+
+</body>
+<script>
+
+
+
+    function  check(){
+
+    let num = document.getElementById('inp').value;
+
+    let numm = num.toString().split("").reverse().join("");
+    let num1 = num.toString();
+
+    if(numm == ""){
+        text1.innerText='enter a number' ;
+    }
+
+    else if( numm == num1){
+    text1.innerText = ` ${num1} both are equal ${numm} It is  a palindrome` ;
+    }
+
+    else{
+    text1.innerText = ` ${num1} both are not equal ${numm} It is not a palindrome` ;
+    }
+
+}
+
+    //    let num = prompt(parseInt('enter a number'));
+
+    // let number=Number(numm);
+
+    // console.log( num , typeof(number) , number );
+
+    // let num = inp.value
+
+    // let num2 = num1.split('');
+    // let num3 = num2.reverse();
+    // let num4 = num3.join('');
+    // text.innerText=` string text :${num1} splited text : ${num2} reversed text : ${num3} joining the reversed text : ${num4} numbered the joining text : ${ num5 } ${typeof(num5)}`
+
+
+
+
+                    // palindrome number
+
+
+
+
+
+    // let num = 191;
+
+    // let rem = 0;
+    // let reversedNum = 0;
+
+    // while(num > 0){
+    //     rem = num % 10 ;
+    //     reversedNum = reversedNum * 10 + rem ;
+    //     num = Math.floor( num / 10 ) ;
+    // }
+
+    // console.log(reversedNum);
+    // console.log(num);
+    // console.log(rem);
+
+
+
+
+</script>
+
+</html>

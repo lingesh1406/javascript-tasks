@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Swapping </title>
+</head>
+<style>
+     body{
+        margin: 0 10vw;
+    }
+</style>
+<body>
+    
+    <h1> Swapping </h1>
+    <input type="number" id="inp1" placeholder="num1">
+    <input type="number" id="inp2" placeholder="num2"> <br>
+    <button onclick="Check()"> check </button>
+
+    <h3 id="text"> </h3>
+</body>
+<script>
+
+function Check(){
+
+    let num1 = document.getElementById('inp1').value;
+    let num2 = document.getElementById('inp2').value;
+    let num3 ;
+
+    num3 = num1;
+    num1 = num2;
+    num2 = num3;
+
+    // num1 = num2;  => if we give like this it will take 2 value for both   
+    // num2 = num1; 
+
+    console.log( num1 , num2 ,typeof(num1) , typeof(num2))
+
+    if(num1 != '' && num2 != ''){
+
+    text.innerHTML = `num1 : ${num1} <br>  num2  : ${num2}`    
+    
+    }
+    else{
+        text.innerHTML = 'plese enter the number'
+    }
+
+}
+</script>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reverse Number</title>
+</head>
+<style>
+    body{
+        margin: 0 10vw;
+    }
+</style>
+<body>
+    
+    <h1>Reverse Number</h1>
+
+    <input type="number" id="num"> <button onclick="Check()"> Check </button>
+    
+    <h3 id="text">  </h3>
+</body>
+<script>
+
+
+function Check(){
+    
+    let inp = document.getElementById('num').value;
+
+    console.log( inp , typeof(inp) );
+
+    let num1 = inp.toString().split('').reverse().join('');
+
+    text.innerHTML = `${num1} your reversed number`;
+
+    // console.log( num1 );
+    
+}
+
+
+</script>
+</html>

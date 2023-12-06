@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anagram </title>
+</head>
+<style>
+    body{
+       margin: 0 10vw;
+   }
+</style>
+<body>
+
+    <h1>Anagram Words</h1>
+    <input type="text" id="text1" placeholder = "enter the words" > <button> Check </button>
+    <input type="text" id="text2" placeholder = "enter the words" > <button onclick="check()"> Check </button>
+
+    <h2 id="text"> </h2>
+     
+</body>
+<script>
+
+   
+
+    // let text1 = 'silent';
+    // let text2 = 'listen';
+
+function check(){
+
+    let text1 = document.getElementById('text1').value;
+    let text2 = document.getElementById('text2').value;
+    text.innerHTML = text1 ;
+
+    
+let value1 = text1.toLocaleLowerCase().split('').sort().join('');
+let value2 = text2.toLocaleLowerCase().split('').sort().join('');
+
+
+ if(value1 !== value2){
+    text.innerHTML = ` ${text1} : ${text2} => it's not an anagram`;
+ }
+
+ else{
+    text.innerHTML = ` ${text1} : ${text2} => it's an anagram`;
+ }
+
+}
+
+</script>
+</html>

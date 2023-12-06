@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content= "width=device-width , initial-scale=1.0">
+    <title>Prime Number</title>
+</head>
+<style>
+    body{
+       margin: 0 10vw;
+   }
+</style>
+<body>
+
+    <h1>Prime Number</h1>
+    <input type="number" id="input">
+    <button onclick="Check()"> Check </button>
+    <h3 id="text"> </h3>
+
+</body>
+<script>
+
+
+
+
+    function Check(){
+
+        let num = document.getElementById('input').value;    
+
+        console.log( num , typeof(num) );
+
+       if( num == 1){
+       text.innerHTML = ` ${num} not a prime number` ;
+       }
+
+       else if( num % 2 == 0 ){
+            text.innerHTML = ` ${num} not a prime number` ;
+        }
+
+        else{
+            text.innerHTML = `${num}  is a prime number ` ;
+        }
+
+        console.log( num , typeof(num) )
+
+    }
+
+    let n = 6; 
+    let o = 0
+    // console.log( 1/1 * 2/2 * 3/3 * 4/4 * 5/5);
+    for(let i = 1 ; i <= n ; i++){
+        o += n * ( n - i );
+        console.log(i,o);
+    }
+
+</script>
+</html>
